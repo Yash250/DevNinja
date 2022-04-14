@@ -1,0 +1,8 @@
+{
+  "host": "0.0.0.0",
+  "port": 8000,
+  "database": {
+    "url": "mongodb+srv://admin:<password>@cluster0.rab9l.mongodb.net/craft-center?retryWrites=true&w=majority",
+    "password": "admin"
+  }
+}
