@@ -1,2 +1,1 @@
-# DevNinja
-ReactJS
+# craft-center
