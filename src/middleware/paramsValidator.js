@@ -5,10 +5,9 @@ const { sendError } = require('../utils/response')
 exports.paramsValidator = (schema, isGet, isParse) => async (req, res, next) => {
     try {
         const data =  isGet ? req.query : req.body;
-        const validationRes = schema.validate(isParse ? parseObj(data) : data);
-        if (validationRes.error) {
-            console.log('err', validationRes)
-            return sendError(validationRes.error, req, res, 400);
+        const { error } = schema.validate(isParse ? parseObj(data) : data);
+        if (error) {
+            return sendError(`Validation error: ${error.details.map(x => x.message).join(', ')}`, req, res, 400);
         } else {
             next();
         }
