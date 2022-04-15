@@ -2,10 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const AppConfig = require('./src/config/app');
 const Server = require('./src/server');
+const cors = require('cors');
 
 const app = express();
-
-
+app.use(cors())
 app.use("/api/v1", require("./src/routes"));
 
 process.on('uncaughtException', (err) => {
