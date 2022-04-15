@@ -17,9 +17,12 @@ exports.registerUser = async(req, res) => {
         if(isExist) return sendError(messages.email_exist, req, res, 400)
         bcrypt.genSalt(12, async function(err, salt) {
             bcrypt.hash(password, salt, async function(err, hash) {
-                const userData = await allInOne(user, 'create', { name, email, password: hash})
+                let userData = await allInOne(user, 'create', { name, email, password: hash})
                 if(!userData) return sendError(messages.s_wrong, req, res, 400)
-                return sendSuccessResponse(req, res, userData)
+                const token = jwt.sign({ id: userData._id }, process.env.SECRET, { expiresIn: "3d" })
+                userData = Object(userData)
+                userData.password = undefined
+                return sendSuccessResponse(req, res, {user: userData, token})
             });
         });
     } catch(err){
