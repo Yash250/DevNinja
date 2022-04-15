@@ -2,27 +2,35 @@ const { Schema, model } = require('mongoose');
 
 const productSchema = new Schema(
   {
-    name: {
+    title: {
       type: String,
+      required: true
     },
     description: {
       type: String,
     },
+    imageUrl: String,
     category: {
       type: Schema.Types.ObjectId,
     },
     variants: [
       {
         params: Object,
+        color: String,
         sku: String,
         price: Number,
         inStock: Boolean,
+        qty: Number
       },
     ],
-    qty:  {
-      type: Number,
+    inStock: {
+      type: Boolean,
+      default: false
     },
-    inStock: Boolean,
+    isBestSeller: {
+      type: Boolean,
+      default: false
+    },
   },
   {
     toJSON: { virtuals: true },

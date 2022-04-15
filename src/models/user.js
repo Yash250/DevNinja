@@ -29,29 +29,15 @@ const userSchema = new mongoose.Schema(
         country: {
             type: String,
         },
-        dob: {
-            type: {
-                day: {
-                    type: Number,
-                    required: true,
-                },
-                month: {
-                    type: Number,
-                    required: true,
-                },
-                year: {
-                    type: Number,
-                    required: true,
-                },
-            },
-        },
+        dob: String,
         cart: [
             {
                 item: {
                     type: mongoose.Schema.Types.ObjectId,
-                    ref: "ProductVariant",
+                    ref: "Product",
                     required: true,
                 },
+                color:String,
                 qty: {
                     type: Number,
                     required: true,
