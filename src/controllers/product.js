@@ -32,8 +32,6 @@ exports.getProduct = async (req, res) => {
     }
     limit = limit ? limit : 30;
     skip = skip ? skip : 0;
-    console.log("ffvfv", criteria);
-    // const products = await product.find(criteria).skip(parseInt(skip)).limit(parseInt(limit))
     const products = await product.aggregate([
       {$match: criteria},
       {
