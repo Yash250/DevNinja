@@ -6,7 +6,7 @@ const { getProducts } = require('./validation');
 const router = Router();
 
 router.route('/create').post(verifyUser, createProduct);
-router.route('/').get(verifyUser, paramsValidator(getProducts, true) ,getProduct);
+router.route('/').get(paramsValidator(getProducts, true, true) ,getProduct);
 
 
 module.exports = router;

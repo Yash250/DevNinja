@@ -1,0 +1,541 @@
+{
+  "products": [
+    {
+      "title": "one",
+      "description": "Products for all in one category.",
+      "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+      "category": "seating",
+      "subCategory": "bestseller",
+      "variants": [
+        {
+          "color": "white",
+          "price": 500,
+          "inStock": true,
+          "qty": 5
+        },
+        {
+          "color": "black",
+          "price": 600,
+          "inStock": true,
+          "qty": 10
+        }
+      ],
+      "inStock": true,
+      "isBestSeller": false
+    },
+    {
+      "title": "two",
+      "description": "Products for all in one category.",
+      "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+      "category": "seating",
+      "subCategory": "new",
+      "variants": [
+        {
+          "color": "white",
+          "price": 500,
+          "inStock": true,
+          "qty": 5
+        },
+        {
+          "color": "black",
+          "price": 600,
+          "inStock": true,
+          "qty": 10
+        }
+      ],
+      "inStock": true,
+      "isBestSeller": false
+    },
+        {
+          "title": "three",
+          "description": "Products for all in one category.",
+          "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+          "category": "seating",
+          "subCategory": "outdoor",
+          "variants": [
+            {
+              "color": "white",
+              "price": 500,
+              "inStock": true,
+              "qty": 5
+            },
+            {
+              "color": "black",
+              "price": 600,
+              "inStock": true,
+              "qty": 10
+            }
+          ],
+          "inStock": true,
+          "isBestSeller": false
+        },
+        {
+          "title": "one",
+          "description": "Products for all in one category.",
+          "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+          "category": "beds",
+          "subCategory": "bestseller",
+          "variants": [
+            {
+              "color": "white",
+              "price": 500,
+              "inStock": true,
+              "qty": 5
+            },
+            {
+              "color": "black",
+              "price": 600,
+              "inStock": true,
+              "qty": 10
+            }
+          ],
+          "inStock": true,
+          "isBestSeller": false
+        },
+        {
+            "title": "two",
+            "description":"Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category":"beds",
+            "subCategory":"new",
+            "variants": [{
+                "color": "white",
+                "price":500,
+                "inStock": true,
+                "qty":5
+            },
+            {
+                "color": "black",
+                "price":600,
+                "inStock": true,
+                "qty":10
+            }],
+            "inStock":true,
+            "isBestSeller":false
+        
+        },
+        {
+            "title": "three",
+            "description":"Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category":"beds",
+            "subCategory":"outdoor",
+            "variants": [{
+                "color": "white",
+                "price":500,
+                "inStock": true,
+                "qty":5
+            },
+            {
+                "color": "black",
+                "price":600,
+                "inStock": true,
+                "qty":10
+            }],
+            "inStock":true,
+            "isBestSeller":false
+        
+        },
+        {
+            "title": "one",
+            "description": "Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category": "storage",
+            "subCategory": "bestseller",
+            "variants": [
+              {
+                "color": "white",
+                "price": 500,
+                "inStock": true,
+                "qty": 5
+              },
+              {
+                "color": "black",
+                "price": 600,
+                "inStock": true,
+                "qty": 10
+              }
+            ],
+            "inStock": true,
+            "isBestSeller": false
+          },
+          {
+              "title": "two",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"storage",
+              "subCategory":"new",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+              "title": "three",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"storage",
+              "subCategory":"outdoor",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+            "title": "one",
+            "description": "Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category": "kids",
+            "subCategory": "bestseller",
+            "variants": [
+              {
+                "color": "white",
+                "price": 500,
+                "inStock": true,
+                "qty": 5
+              },
+              {
+                "color": "black",
+                "price": 600,
+                "inStock": true,
+                "qty": 10
+              }
+            ],
+            "inStock": true,
+            "isBestSeller": false
+          },
+          {
+              "title": "two",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"kids",
+              "subCategory":"new",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+              "title": "three",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"kids",
+              "subCategory":"outdoor",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+            "title": "one",
+            "description": "Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category": "tables",
+            "subCategory": "bestseller",
+            "variants": [
+              {
+                "color": "white",
+                "price": 500,
+                "inStock": true,
+                "qty": 5
+              },
+              {
+                "color": "black",
+                "price": 600,
+                "inStock": true,
+                "qty": 10
+              }
+            ],
+            "inStock": true,
+            "isBestSeller": false
+          },
+          {
+              "title": "two",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"tables",
+              "subCategory":"new",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+              "title": "three",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"tables",
+              "subCategory":"outdoor",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          },
+          {
+            "title": "one",
+            "description": "Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category": "bars",
+            "subCategory": "bestseller",
+            "variants": [
+              {
+                "color": "white",
+                "price": 500,
+                "inStock": true,
+                "qty": 5
+              },
+              {
+                "color": "black",
+                "price": 600,
+                "inStock": true,
+                "qty": 10
+              }
+            ],
+            "inStock": true,
+            "isBestSeller": false
+          },
+          {
+              "title": "two",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"bars",
+              "subCategory":"new",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+              "title": "three",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"bars",
+              "subCategory":"outdoor",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+            "title": "one",
+            "description": "Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category": "gifting",
+            "subCategory": "bestseller",
+            "variants": [
+              {
+                "color": "white",
+                "price": 500,
+                "inStock": true,
+                "qty": 5
+              },
+              {
+                "color": "black",
+                "price": 600,
+                "inStock": true,
+                "qty": 10
+              }
+            ],
+            "inStock": true,
+            "isBestSeller": false
+          },
+          {
+              "title": "two",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"gifting",
+              "subCategory":"new",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+              "title": "three",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"gifting",
+              "subCategory":"outdoor",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+            "title": "one",
+            "description": "Products for all in one category.",
+            "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+            "category": "outdoor",
+            "subCategory": "bestseller",
+            "variants": [
+              {
+                "color": "white",
+                "price": 500,
+                "inStock": true,
+                "qty": 5
+              },
+              {
+                "color": "black",
+                "price": 600,
+                "inStock": true,
+                "qty": 10
+              }
+            ],
+            "inStock": true,
+            "isBestSeller": false
+          },
+          {
+              "title": "two",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"outdoor",
+              "subCategory":"new",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          },
+          {
+              "title": "three",
+              "description":"Products for all in one category.",
+              "imageUrl": "https://i.ibb.co/NmrZkfz/0-C6-A9451-300x300.jpg",
+              "category":"outdoor",
+              "subCategory":"outdoor",
+              "variants": [{
+                  "color": "white",
+                  "price":500,
+                  "inStock": true,
+                  "qty":5
+              },
+              {
+                  "color": "black",
+                  "price":600,
+                  "inStock": true,
+                  "qty":10
+              }],
+              "inStock":true,
+              "isBestSeller":false
+          
+          }
+  ]
+}

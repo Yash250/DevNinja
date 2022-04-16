@@ -9,9 +9,10 @@ exports.createUser = Joi.object().keys({
 exports.getProducts = Joi.object().keys({
     limit: Joi.string().optional(),
     skip: Joi.string().optional(),
-    categoryId: Joi.string().optional(),
     searchTerm: Joi.string().optional(),
     isBestSeller: Joi.boolean().optional(),
+    category: Joi.array().optional(),
+    subCategory: Joi.array().optional(),
 });
 
 exports.loginUsers = Joi.object().keys({

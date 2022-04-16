@@ -11,7 +11,10 @@ const productSchema = new Schema(
     },
     imageUrl: String,
     category: {
-      type: Schema.Types.ObjectId,
+      type: String,
+    },
+    subCategory: {
+      type: String,
     },
     variants: [
       {
