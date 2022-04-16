@@ -7,8 +7,8 @@ exports.createUser = Joi.object().keys({
 });
 
 exports.getProducts = Joi.object().keys({
-    limit: Joi.string().optional(),
-    skip: Joi.string().optional(),
+    limit: Joi.number().optional(),
+    skip: Joi.number().optional(),
     searchTerm: Joi.string().optional(),
     isBestSeller: Joi.boolean().optional(),
     category: Joi.array().optional(),
