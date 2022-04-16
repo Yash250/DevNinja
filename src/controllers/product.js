@@ -15,6 +15,18 @@ exports.createProduct = async (req, res) => {
   }
 };
 
+exports.getProductDetail = async (req, res) => {
+    try {
+      let { id } = req.params;
+      if (!id) return sendError(messages.s_wrong, req, res, 400);
+      const products = await allInOne(product, "findOne", {_id: id});
+      if (!products) return sendError(messages.s_wrong, req, res, 400);
+      return sendSuccessResponse(req, res, products);
+    } catch (err) {
+      return sendError(err.message, req, res, 500);
+    }
+  };
+
 exports.getProduct = async (req, res) => {
   try {
     let payload = parseObj(req.query);
