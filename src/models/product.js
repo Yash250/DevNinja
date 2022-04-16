@@ -18,7 +18,8 @@ const productSchema = new Schema(
     },
     variants: [
       {
-        params: Object,
+        displayImage: String,
+        thumbnailImages: [String],
         color: String,
         sku: String,
         price: Number,

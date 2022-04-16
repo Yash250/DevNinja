@@ -30,9 +30,10 @@ exports.getProductDetail = async (req, res) => {
 exports.getProduct = async (req, res) => {
   try {
     let payload = parseObj(req.query);
-    let { limit, skip, searchTerm, isBestSeller, category, subCategory } =
+    let { limit, skip, searchTerm, isBestSeller, category, subCategory, sortBy } =
       payload;
     let criteria = {};
+    if(!sortBy) sortBy = 'createdAt'
     if (subCategory) criteria.subCategory = { $in: subCategory };
     if (category) criteria.category = { $in: category };
     if (isBestSeller) criteria.isBestSeller = isBestSeller;
@@ -68,7 +69,7 @@ exports.getProduct = async (req, res) => {
           newRoot: { $arrayToObject: "$data" },
         },
       },
-    ]).skip(parseInt(skip)).limit(parseInt(limit));
+    ]).skip(parseInt(skip)).limit(parseInt(limit)).sort({sortBy: -1});
     const productCount = await product.countDocuments(criteria);
     return sendSuccessResponse(req, res, products[0], productCount);
   } catch (err) {
