@@ -19,3 +19,7 @@ exports.loginUsers = Joi.object().keys({
     email: Joi.string().email().required(),
     password: Joi.any().required(),
 });
+
+exports.cartUser = Joi.object().keys({
+    cartItems: Joi.array().required(),
+});

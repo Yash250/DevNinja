@@ -5,5 +5,6 @@ exports.messages = {
     u_not_exist: "User not exist!",
     incorrect_pass: "Incorrect password!",
     name_required: "Name is required.",
-    unauth_user:'Unauthorized User'
+    unauth_user:'Unauthorized User',
+    not_enough: "Not enough Data."
 }

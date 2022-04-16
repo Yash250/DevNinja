@@ -34,7 +34,7 @@ exports.loginUser = async(req, res) => {
     const { email, password } = req.body
     try {
         if(!email || !password) return sendError(messages.id_required, req, res, 400)
-        let isExist = await allInOne(user, 'findOne', { email: email}) 
+        let isExist = await user.findOne({email:email}).populate('cart.item')
         if(!isExist) return sendError(messages.u_not_exist, req, res, 400)
         bcrypt.compare(password, isExist.password , async function(err, result) {
             if(err) return sendError(err, req, res, 400)
@@ -44,6 +44,20 @@ exports.loginUser = async(req, res) => {
             isExist.password = undefined
             return sendSuccessResponse(req, res, {user: isExist, token})
         });
+    } catch(err){
+        sendError(err.message, req, res, 400)
+    }
+}
+
+exports.addToCart = async(req, res) => {
+    const { cartItems } = req.body
+    const userData = req.user
+    try {
+        if(!cartItems || !cartItems.length) return sendError(messages.not_enough, req, res, 400)
+        let updateCart = await user.updateOne({ _id: userData._id}, {cart: cartItems}, {new: true})
+        if(!updateCart) return sendError(messages.u_not_exist, req, res, 400)
+        const updatedUser = await user.findOne({_id:userData._id}).populate('cart.item')
+        return sendSuccessResponse(req, res, updatedUser)
     } catch(err){
         sendError(err.message, req, res, 400)
     }
