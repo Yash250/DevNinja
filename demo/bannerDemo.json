@@ -1,0 +1,24 @@
+{
+    "banner": [
+        {
+            "title": "one",
+            "imageURL":"https://i.ibb.co/whXK64j/banner.png",
+            "isActive":true
+        },
+        {
+            "title": "two",
+            "imageURL":"https://i.ibb.co/whXK64j/banner.png",
+            "isActive":true
+        },
+        {
+            "title": "three",
+            "imageURL":"https://i.ibb.co/whXK64j/banner.png",
+            "isActive":true
+        },
+        {
+            "title": "four",
+            "imageURL":"https://i.ibb.co/whXK64j/banner.png",
+            "isActive":true
+        }
+    ]
+}
