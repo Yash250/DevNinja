@@ -3,7 +3,7 @@ exports.allInOne = async(model, queryName, criteria, updateObject, projections, 
     return new Promise(async (resolve, reject) => {
         try{
             let data
-            if(queryName !== "create") {
+            if(queryName !== "create" || queryName !== "insertMany") {
                 data = await model[queryName](criteria).select(projections)
             } else {
                 data = await model[queryName](criteria)
