@@ -23,3 +23,7 @@ exports.loginUsers = Joi.object().keys({
 exports.cartUser = Joi.object().keys({
     cartItems: Joi.array().required(),
 });
+
+exports.addressSchema = Joi.object().keys({
+    addresses: Joi.array().required(),
+});

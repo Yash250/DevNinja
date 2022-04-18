@@ -10,7 +10,6 @@ app.use("/api/v1", require("./src/routes"));
 
 process.on('uncaughtException', (err) => {
   console.log('Uncaught Exception! Shutting down...');
-  console.log(err);
   process.exit(1);
 });
 

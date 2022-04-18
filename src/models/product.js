@@ -23,8 +23,10 @@ const productSchema = new Schema(
         color: String,
         sku: String,
         price: Number,
+        totalStock: Number,
         inStock: Boolean,
-        qty: Number
+        qty: Number,
+        description: String
       },
     ],
     inStock: {

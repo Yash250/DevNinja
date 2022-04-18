@@ -62,3 +62,17 @@ exports.addToCart = async(req, res) => {
         sendError(err.message, req, res, 400)
     }
 }
+
+exports.addShippingAddress = async(req, res) => {
+    const { addresses } = req.body
+    const userData = req.user
+    try {
+        if(!addresses || !addresses.length) return sendError(messages.not_enough, req, res, 400)
+        let updateAddress = await user.updateOne({ _id: userData._id}, {shippingAddress: addresses}, {new: true})
+        if(!updateAddress) return sendError(messages.u_not_exist, req, res, 400)
+        const updatedUser = await user.findOne({_id:userData._id})
+        return sendSuccessResponse(req, res, updatedUser)
+    } catch(err){
+        sendError(err.message, req, res, 400)
+    }
+}

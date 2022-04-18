@@ -12,6 +12,7 @@ exports.verifyUser = async (req, res, next) => {
     try{
         if(req.headers.authorization){
             const token = req.headers.authorization.split(' ')[1];
+            if(!token) return sendError(messages.unauth_user, req, res, 400);
             jwt.verify(token, process.env.SECRET, async (err, data) => {
                 if(err){
                     return sendError(err, req, res, 400);

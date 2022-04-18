@@ -1,4 +1,5 @@
 const { messages } = require("../config/messages");
+const banners = require("../models/banners");
 const product = require("../models/product");
 const { parseObj } = require("../services/logical");
 const { allInOne } = require("../utils/queryHelper");
@@ -45,6 +46,7 @@ exports.getProduct = async (req, res) => {
     }
     limit = limit ? limit : 30;
     skip = skip ? skip : 0;
+    const banner = await banners.find({ category: { $in: category } })
     const products = await product.aggregate([
       {$match: criteria},
       {
@@ -71,7 +73,9 @@ exports.getProduct = async (req, res) => {
       },
     ]).skip(parseInt(skip)).limit(parseInt(limit)).sort({sortBy: -1});
     const productCount = await product.countDocuments(criteria);
-    return sendSuccessResponse(req, res, products[0], productCount);
+    let allProds = products[0]
+    allProds.banners = banner
+    return sendSuccessResponse(req, res, allProds, productCount);
   } catch (err) {
     return sendError(err.message, req, res, 500);
   }

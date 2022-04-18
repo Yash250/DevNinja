@@ -44,6 +44,24 @@ const userSchema = new mongoose.Schema(
                 },
             },
         ],
+        shippingAddress: [
+            {
+                country: { type: String},
+                firstName : { type: String},
+                lastName : { type: String},
+                company: { type: String},
+                add1: { type: String},
+                add2: { type: String},
+                city: { type: String},
+                pinCode: { type: String},
+                state: { type: String},
+                phone: { type: String},
+                isDefault : {
+                    type: Boolean,
+                    default: false
+                }
+            }
+        ],
         isDeleted: {
             type: Boolean,
             default: false,
