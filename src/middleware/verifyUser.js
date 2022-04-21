@@ -15,7 +15,7 @@ exports.verifyUser = async (req, res, next) => {
             if(!token) return sendError(messages.unauth_user, req, res, 400);
             jwt.verify(token, process.env.SECRET, async (err, data) => {
                 if(err){
-                    return sendError(err, req, res, 400);
+                    return sendError(messages.token_expired, req, res, 400);
                 }
                 if(!data) return sendError(messages.unauth_user);
                 let userData = await allInOne(user, 'findOne', { _id: data.id})

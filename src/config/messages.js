@@ -6,5 +6,6 @@ exports.messages = {
     incorrect_pass: "Incorrect password!",
     name_required: "Name is required.",
     unauth_user:'Unauthorized User',
-    not_enough: "Not enough Data."
+    not_enough: "Not enough Data.",
+    token_expired: "Authentication token expired."
 }
