@@ -98,6 +98,6 @@ exports.uploadProductImage = async(req, res) => {
     if(!uploadedFile)  return sendError(messages.file_error, req, res, 400);
     return sendSuccessResponse(req, res, { url: uploadedFile});
   } catch(err){
-    return sendError(err.message, req, res, 500);
+    return sendError(err, req, res, 500);
   }
 }
