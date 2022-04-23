@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors())
+app.use(express.bodyParser({limit: '50mb'}));
 app.use("/api/v1", require("./src/routes"));
 
 process.on('uncaughtException', (err) => {
