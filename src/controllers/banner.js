@@ -29,7 +29,7 @@ exports.deleteBanners = async (req, res) => {
 exports.getBanners = async (req, res) => {
   let payload = parseObj(req.query);
     try {
-      let criteria = {}
+      let criteria = { isActive: true}
       if(payload.category){
         criteria.category = { $in: payload.category ? payload.category : [] }
       }
@@ -38,4 +38,17 @@ exports.getBanners = async (req, res) => {
     } catch(err){
         return sendError(err.message, req, res, 500)
     }
+}
+
+exports.makeActive = async(req, res) => {
+  const { id } = req.params
+  let { isActive } = parseObj(req.body);
+  try {
+      if(!id) return sendError(messages.not_enough, req, res, 400)
+      const banner = await banners.findOneAndUpdate({_id: id }, { isActive }, { new: true}) 
+      return sendSuccessResponse(req, res, banner)
+  } catch(err){
+      return sendError(err.message, req, res, 500)
+  }
+
 }

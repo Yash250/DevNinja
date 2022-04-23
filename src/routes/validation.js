@@ -38,3 +38,7 @@ exports.cartUser = Joi.object().keys({
 exports.addressSchema = Joi.object().keys({
     addresses: Joi.array().required(),
 });
+
+exports.editBannerSchema = Joi.object().keys({
+    isActive: Joi.boolean().optional(),
+});

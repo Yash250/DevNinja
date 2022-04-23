@@ -20,7 +20,6 @@ const bannerSchema = new mongoose.Schema(
 		},
         isActive: {
 			type: Boolean,
-			select: false,
 		},
 		isDeleted: {
 			type: Boolean,
