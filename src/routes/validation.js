@@ -15,6 +15,17 @@ exports.getProducts = Joi.object().keys({
     subCategory: Joi.array().optional(),
 });
 
+exports.updateProducts = Joi.object().keys({
+    title: Joi.string().optional(),
+    description: Joi.string().optional(),
+    imageUrl: Joi.string().optional(),
+    category: Joi.string().optional(),
+    subCategory: Joi.string().optional(),
+    variants: Joi.array().optional(),
+    inStock: Joi.boolean().optional(),
+    isBestSeller: Joi.boolean().optional()
+});
+
 exports.loginUsers = Joi.object().keys({
     email: Joi.string().email().required(),
     password: Joi.any().required(),

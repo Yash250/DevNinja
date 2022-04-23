@@ -10,5 +10,6 @@ exports.messages = {
     token_expired: "Authentication token expired.",
     not_permission: "Only admin can access this feature.",
     not_file:"Please upload an png/jpeg/jpg file!",
-    file_error: "There are some issue with uploading file."
+    file_error: "There are some issue with uploading file.",
+    success: "Succesfully done."
 }

@@ -101,3 +101,26 @@ exports.uploadProductImage = async(req, res) => {
     return sendError(err, req, res, 500);
   }
 }
+
+exports.updateProduct = async(req, res) => {
+  try {
+    const { id } = req.params
+    let payload = parseObj(req.body);
+    const products = await product.findOneAndUpdate({ _id: id}, payload, { new: true })
+    if (!products) return sendError(messages.s_wrong, req, res, 400);
+    return sendSuccessResponse(req, res, products);
+  } catch (err) {
+    return sendError(err.message, req, res, 500);
+  }
+}
+
+exports.deleteProduct = async (req, res) => {
+  try {
+    let { id } = req.params;
+    const banner = await allInOne(product, "deleteOne", { _id: id });
+    if (!banner) return sendError(messages.s_wrong, req, res, 400);
+    return sendSuccessResponse(req, res, messages.success);
+  } catch (err) {
+    return sendError(err.message, req, res, 500);
+  }
+};
