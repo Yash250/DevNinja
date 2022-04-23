@@ -3,10 +3,12 @@ const mongoose = require('mongoose');
 const AppConfig = require('./src/config/app');
 const Server = require('./src/server');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
 app.use(cors())
-app.use(express.bodyParser({limit: '50mb'}));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use("/api/v1", require("./src/routes"));
 
 process.on('uncaughtException', (err) => {
