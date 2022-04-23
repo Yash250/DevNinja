@@ -1,9 +1,13 @@
+const path = require('path')
+const fs = require('fs');
+
 const { messages } = require("../config/messages");
 const banners = require("../models/banners");
 const product = require("../models/product");
 const { parseObj } = require("../services/logical");
 const { allInOne } = require("../utils/queryHelper");
 const { sendSuccessResponse, sendError } = require("../utils/response");
+const { uploadImage } = require("../services/s3");
 
 exports.createProduct = async (req, res) => {
   try {
@@ -80,3 +84,20 @@ exports.getProduct = async (req, res) => {
     return sendError(err.message, req, res, 500);
   }
 };
+
+exports.uploadProductImage = async(req, res) => {
+  try {
+    const { file } = req
+    if (!file)  return sendError(messages.not_file, req, res, 400);
+    let paths = path.join(__dirname, `../assets/uploads/${file.originalname}`)
+    const fileContent = fs.readFileSync(paths);
+    const fileType = file.mimetype.split('/')[1]
+    if(!fileContent || !fileType)  return sendError(messages.file_error, req, res, 400);
+    let uploadedFile = await uploadImage(fileContent, fileType)
+    fs.unlinkSync(paths)
+    if(!uploadedFile)  return sendError(messages.file_error, req, res, 400);
+    return sendSuccessResponse(req, res, { url: uploadedFile});
+  } catch(err){
+    return sendError(err.message, req, res, 500);
+  }
+}
