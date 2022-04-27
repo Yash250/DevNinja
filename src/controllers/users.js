@@ -53,7 +53,7 @@ exports.addToCart = async(req, res) => {
     const { cartItems } = req.body
     const userData = req.user
     try {
-        if(!cartItems || !cartItems.length) return sendError(messages.not_enough, req, res, 400)
+        // if(!cartItems || !cartItems.length) return sendError(messages.not_enough, req, res, 400)
         let updateCart = await user.updateOne({ _id: userData._id}, {cart: cartItems}, {new: true})
         if(!updateCart) return sendError(messages.u_not_exist, req, res, 400)
         const updatedUser = await user.findOne({_id:userData._id}).populate('cart.item')
