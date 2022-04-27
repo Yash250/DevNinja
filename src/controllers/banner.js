@@ -29,11 +29,10 @@ exports.deleteBanners = async (req, res) => {
 exports.getBanners = async (req, res) => {
   let payload = parseObj(req.query);
     try {
-      let criteria = { isActive: true}
       if(payload.category){
         criteria.category = { $in: payload.category ? payload.category : [] }
       }
-        const banner = await allInOne(banners, 'find', criteria, null) 
+        const banner = await allInOne(banners, 'find', null) 
         return sendSuccessResponse(req, res, banner)
     } catch(err){
         return sendError(err.message, req, res, 500)
