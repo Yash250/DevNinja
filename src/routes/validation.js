@@ -14,6 +14,14 @@ exports.getProducts = Joi.object().keys({
     category: Joi.array().optional(),
     subCategory: Joi.array().optional(),
 });
+exports.getOrder = Joi.object().keys({
+    limit: Joi.number().optional(),
+    skip: Joi.number().optional(),
+    searchTerm: Joi.string().optional(),
+    isBestSeller: Joi.boolean().optional(),
+    category: Joi.array().optional(),
+    subCategory: Joi.array().optional(),
+});
 
 exports.updateProducts = Joi.object().keys({
     title: Joi.string().optional(),
