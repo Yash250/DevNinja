@@ -52,7 +52,7 @@ exports.getProduct = async (req, res) => {
     skip = skip ? skip : 0;
     const banner = await banners.find({ category: { $in: category } })
     const products = await product.aggregate([
-      {$match: criteria},
+      {$match: category && category[0]=='home'? {} : criteria},
       {
         $group: {
           _id: "$subCategory",

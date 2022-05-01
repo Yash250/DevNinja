@@ -11,6 +11,10 @@ const bannerSchema = new mongoose.Schema(
 			type: String,
             required: true
 		},
+		desktopURL: {
+			type: String,
+            required: true
+		},
 		clickedURL: {
 			type: String,
 			required: true
